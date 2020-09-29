@@ -1,0 +1,20 @@
+.air-q {
+    padding-top: 99px;
+    &-title {
+        font-weight: normal;
+        font-size: 35px;
+        line-height: 41px;
+        text-align: center;
+        color: #ffffff;
+    }
+    &-map {
+        font-weight: normal;
+        margin: 20px 0;
+        height: 560px;
+    }
+    &-text {
+        font-size: 23px;
+        line-height: 27px;
+        color: #ffffff;
+    }
+}
