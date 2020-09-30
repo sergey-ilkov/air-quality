@@ -1,7 +1,10 @@
 .hero {
-    background-image: linear-gradient(to top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../assets/hero-bg.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('../../assets/hero-bg.jpg');
     background-size: cover;
-    padding: 80px 0 178px;
+    padding: 80px 0 180px;
+    margin-bottom: 50px;
+
     &-partners {
         display: flex;
         align-items: center;
@@ -12,6 +15,92 @@
             }
         }
     }
+    &-burger {
+        position: relative;
+
+        &-box {
+            position: absolute;
+            color: #ffffff;
+            font-size: 20px;
+            width: 30px;
+            height: 30px;
+            top: 2rem;
+            right: 1.5rem;
+            cursor: pointer;
+            z-index: 3;
+            display: none;
+
+            &-icon {
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                top: 13px;
+                background-color: #ffffff;
+            }
+            &-icon::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -10px;
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #ffffff;
+            }
+            &-icon::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 10px;
+                display: block;
+                width: 30px;
+                height: 3px;
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    &-menu {
+        &-inner {
+            color: #ffffff;
+            width: 100%;
+            height: 100%;
+            background-color: #888888;
+            text-align: center;
+            display: none;
+        }
+        &-button {
+            width: 30px;
+            text-align: left;
+            margin: 20px 20px;
+            line-height: 27px;
+            font-size: 50px;
+            font-weight: 200;
+            cursor: pointer;
+            user-select: none;
+        }
+        &-links {
+            padding: 70px 0 180px;
+        }
+        &-link {
+            &-item {
+                display: block;
+                font-size: 23px;
+                line-height: 27px;
+                text-align: center;
+                color: #ffffff;
+                text-decoration: none;
+                padding: 20px;
+            }
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 15px;
+            padding: 15px;
+        }
+    }
+
     &-navigation {
         margin-top: 45px;
         &-item {
@@ -46,4 +135,161 @@
     }
 }
 
+@media (max-width: 1280px) {
+    .hero {
+        padding: 0 0 100px;
+        transition: all 0.2s ease-in-out;
+        &-navigation,
+        &-title {
+            padding-left: 20px;
+        }
+        &-link {
+            margin-left: 20px;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .hero {
+        transition: all 0.2s ease-in-out;
+        &-partners {
+            &-item {
+                margin-left: 50px;
+            }
+        }
+        &-navigation {
+            margin-top: 35px;
+            &-item {
+                margin-left: 50px;
+            }
+        }
+        &-title {            
+            font-size: calc(2rem + 1.23vw);
+            margin: 80px 0 100px;
+        }
+        &-link {
+            padding: 30px 120px;
+        }
+    }
+}
 
+@media (max-width: 960px) {
+    .hero {
+        transition: all 0.2s ease-in-out;
+        &-partners {
+            &-item {
+                max-width: 12%;
+                margin-left: 40px;
+                &:first-child {
+                    max-width: 20%;
+                }
+                &:last-child {
+                    max-width: 20%;
+                }
+            }
+        }
+        &-navigation {
+            &-item {
+                font-size: 17px;
+            }
+        }
+        &-title {
+           max-width: 550px;
+            margin: 50px 0 80px;
+        }
+        &-link {
+            
+            padding: 25px 100px;
+        }
+    }
+}
+@media (max-width: 860px) {
+    .hero {
+        transition: all 0.2s ease-in-out;
+
+        &-navigation {
+            &-item {
+                font-size: 15px;
+            }
+        }
+        
+        &-link {
+            padding: 22px 80px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .hero {
+        transition: all 0.2s ease-in-out;
+        &-burger {
+            &-box {
+                display: block;
+            }
+        }
+        &-menu-inner {
+            position: absolute;
+        }
+
+        &-navigation {
+            display: none;
+        }
+        
+        &-link {
+            padding: 22px 80px;
+        }
+    }
+}
+@media (max-width: 600px) {
+    .hero {
+        &-title {
+            max-width: 500px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .hero {
+        &-title {
+            font-size: 32px;
+            line-height: 37px;
+            max-width: 374px;
+            padding: 130px 20px;
+        }
+        &-link {                      
+            padding: 22px 0;
+            margin: 0;
+            width: 100%;
+            text-align: center;
+        }        
+    }
+}
+@media (max-width: 400px) {
+    .hero {
+        &-title {            
+            font-size: calc(1.5rem + 1.23vw);          
+            padding: 120px 20px;
+        }              
+    }
+}
+@media (max-width: 350px) {
+    .hero {
+        &-title {
+            font-size: calc(1.2rem + 1.23vw);         
+            max-width: 300px;
+            padding: 100px 20px;
+        }              
+    }
+}
+@media (max-width: 326px) {
+    .hero {
+        &-title {
+            font-size: calc(1rem + 1.23vw);         
+            max-width: 250px;
+            padding: 100px 20px;
+        }              
+    }
+}
+
+// 1200
+// 992
+// 768
+// 480
+// 320

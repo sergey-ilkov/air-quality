@@ -13,8 +13,7 @@ const AirQuality = () => {
         lat: 48.3,
         zoom: 5,
     });
-    useEffect(() => {
-        console.log(mapContainer);
+    useEffect(() => {        
         const map = new mapboxgl.Map({
             container: mapContainer.current,
             style: 'mapbox://styles/mapbox/outdoors-v11',

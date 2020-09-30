@@ -1,50 +1,43 @@
 import React, { useState } from 'react'
 
 const SectorItem = ({ sector, number }) => {
-  const [isToolTipShowing, setToolTipShowing] = useState(false);
-
-  const [isDirectionSwitched, setDirectionSwitched] = useState(false)
-  const toggleToolTip = (newValue) => {
-    setDirectionSwitched(number % 3 === 0);
-    setToolTipShowing(newValue);
-  };
-
+    const [isToolTipShowing, setToolTipShowing] = useState(false);
+    const [isDirectionSwitched, setDirectionSwitched] = useState(false)
+    const toggleToolTip = (newValue) => {
+        setDirectionSwitched(number % 3 === 0);
+        setToolTipShowing(newValue);
+    };
 
 
-  return (
-    <div
-      className="sectors-list-item"
+    return (
+        <div
+            className="sectors-list-item"
+            onMouseEnter={() => toggleToolTip(true)}
+            onMouseLeave={() => toggleToolTip(false)}
+            style={{
+                background: `url(${sector.imgUrl}) center no-repeat`,
+                backgroundSize: 'cover'
+            }}>
 
-      onMouseEnter={() => toggleToolTip(true)}
-      onMouseLeave={() => toggleToolTip(false)}
-      style={{
-        background: `url(${sector.imgUrl}) center no-repeat`,
-        backgroundSize: 'cover'
-      }}>
-      {/* <p className="sectors-list-item-name">
-        {sector.name}
-      </p> */}
+            {
+                <p className={`sectors-list-item-name ${isToolTipShowing
+                    ? "sectors-list-item-name-switched"
+                    : ""
+                    }`}>
+                    {sector.name}
+                </p>
+            }
 
-      
-        {
-          <p className={`sectors-list-item-name ${isToolTipShowing
-            ? "sectors-list-item-name-switched"
-            : ""
-            }`}>
-            {sector.name}
-          </p>
-        }
-      
-      {
-        isToolTipShowing && <p className={`sectors-list-item-tooltip ${isDirectionSwitched
-          ? "sectors-list-item-tooltip-switched"
-          : ""
-          }`}>
-          {sector.description}
-        </p>
-      }
-    </div >
-  );
+            {
+                isToolTipShowing && <p className={`sectors-list-item-tooltip ${isDirectionSwitched
+                    ? "sectors-list-item-tooltip-switched"
+                    : ""
+                    }`}>
+                    {sector.description}
+                </p>
+            }
+        </div >
+    );
 };
 
 export default SectorItem;
