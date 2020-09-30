@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/air-quality/static/css/main.e3675684.chunk.css",
-    "main.js": "/air-quality/static/js/main.11b9647a.chunk.js",
-    "main.js.map": "/air-quality/static/js/main.11b9647a.chunk.js.map",
+    "main.css": "/air-quality/static/css/main.ec107e9b.chunk.css",
+    "main.js": "/air-quality/static/js/main.1c612fee.chunk.js",
+    "main.js.map": "/air-quality/static/js/main.1c612fee.chunk.js.map",
     "runtime-main.js": "/air-quality/static/js/runtime-main.2c0b8cd0.js",
     "runtime-main.js.map": "/air-quality/static/js/runtime-main.2c0b8cd0.js.map",
     "static/css/2.e0686c58.chunk.css": "/air-quality/static/css/2.e0686c58.chunk.css",
-    "static/js/2.8e061a87.chunk.js": "/air-quality/static/js/2.8e061a87.chunk.js",
-    "static/js/2.8e061a87.chunk.js.map": "/air-quality/static/js/2.8e061a87.chunk.js.map",
+    "static/js/2.22ca487e.chunk.js": "/air-quality/static/js/2.22ca487e.chunk.js",
+    "static/js/2.22ca487e.chunk.js.map": "/air-quality/static/js/2.22ca487e.chunk.js.map",
     "index.html": "/air-quality/index.html",
-    "precache-manifest.00309e2864f7db1de8924b84ad90db24.js": "/air-quality/precache-manifest.00309e2864f7db1de8924b84ad90db24.js",
+    "precache-manifest.06b6085f7425d36a4769b5743584b4de.js": "/air-quality/precache-manifest.06b6085f7425d36a4769b5743584b4de.js",
     "service-worker.js": "/air-quality/service-worker.js",
     "static/css/2.e0686c58.chunk.css.map": "/air-quality/static/css/2.e0686c58.chunk.css.map",
-    "static/css/main.e3675684.chunk.css.map": "/air-quality/static/css/main.e3675684.chunk.css.map",
-    "static/js/2.8e061a87.chunk.js.LICENSE.txt": "/air-quality/static/js/2.8e061a87.chunk.js.LICENSE.txt",
+    "static/css/main.ec107e9b.chunk.css.map": "/air-quality/static/css/main.ec107e9b.chunk.css.map",
+    "static/js/2.22ca487e.chunk.js.LICENSE.txt": "/air-quality/static/js/2.22ca487e.chunk.js.LICENSE.txt",
     "static/media/GC_logo.svg": "/air-quality/static/media/GC_logo.0662d9de.svg",
     "static/media/ITN_logo.svg": "/air-quality/static/media/ITN_logo.2f311a05.svg",
     "static/media/energetics.jpg": "/air-quality/static/media/energetics.cb7774c0.jpg",
@@ -33,8 +33,8 @@
   "entrypoints": [
     "static/js/runtime-main.2c0b8cd0.js",
     "static/css/2.e0686c58.chunk.css",
-    "static/js/2.8e061a87.chunk.js",
-    "static/css/main.e3675684.chunk.css",
-    "static/js/main.11b9647a.chunk.js"
+    "static/js/2.22ca487e.chunk.js",
+    "static/css/main.ec107e9b.chunk.css",
+    "static/js/main.1c612fee.chunk.js"
   ]
 }
