@@ -3,7 +3,16 @@ import React, { useState } from 'react';
 import './HeroBlock.scss';
 
 
-const HeroBlock = ({ title, links, logos }) => {
+const HeroBlock = ({ title, links, logos, arrow }) => {
+    const [isClickBtn, setClickBtn] = useState(false);
+
+    const clickBurger = () => {
+        isClickBtn ? setClickBtn(false) : setClickBtn(true);
+    }
+    const closeBtn = () => {
+        isClickBtn ? setClickBtn(false) : setClickBtn(true);            
+    }
+
     const logosImages = logos.map((logoItem, index) => (
         <img key={index} src={logoItem} alt="partner-logo" className="hero-partners-item" />
     ));
@@ -13,25 +22,11 @@ const HeroBlock = ({ title, links, logos }) => {
         </a>
     ));
     const menuLink = links.map((link, index) => (
-        <a key={index} href={link.href} className="hero-menu-link-item">
+        <a key={index} href={link.href} className="hero-menu-link-item" onClick={closeBtn}>
             {link.title}
         </a>
     ));
-    const [isClickBtn, setClickBtn] = useState(false);
-    // const [isClickBurger, setClickBurger] = useState(false);
-
-    const clickBurger = () => {
-        
-        isClickBtn ? setClickBtn(false) : setClickBtn(true);       
-        // isClickBurger ? setClickBurger(false) : setClickBurger(true);       
-    }
-
-    const closeBtn = () => {        
-        isClickBtn ? setClickBtn(false) : setClickBtn(true);       
-    }
-
-    
-    
+    const arrowBtn = arrow.map((link, i) => (<img key={i} src={link.imgUrl} alt="arrow"/>));
    
 
     return (
@@ -42,12 +37,11 @@ const HeroBlock = ({ title, links, logos }) => {
                         <div className="hero-burger-box-icon" />
                     </div>
                 </div>
-
                 <div className="hero-menu-inner"
-                style={
-                    isClickBtn ? {display: `block`}: {display: `none`}}>
-                    <div className="hero-menu-button" onClick = { closeBtn }>
-                    &times;
+                    style={
+                        isClickBtn ? { display: `block` } : { display: `none` }}>
+                    <div className="hero-menu-button" onClick={closeBtn}>
+                        &times;
                     </div>
                     <nav className="hero-menu-links">{menuLink}</nav>
                     <p className="hero-menu-text">2020, Все права защищены</p>
@@ -57,17 +51,13 @@ const HeroBlock = ({ title, links, logos }) => {
                     </p>
 
                 </div>
-
-
-
-
                 <div className="hero-partners">{logosImages}</div>
                 <nav className="hero-navigation">{navItems}</nav>
                 <h1 className="hero-title">{title}</h1>
-                <a href="#" className="hero-link">
+                <a href="#index" className="hero-link">
                     Отследить
                 </a>
-
+               <div className="hero-arrow">{arrowBtn}</div>               
             </div>
         </section>
     );

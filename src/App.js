@@ -26,6 +26,9 @@ function App() {
             href: '#politics',
         },
     ];
+    const arrowBtn = [{
+        imgUrl: require('./assets/arrow.png')
+    }];
     const factsSlides = [
         {
             id: '1332',
@@ -100,6 +103,7 @@ function App() {
                 title="Качество атмосферного воздуха и здоровье"
                 logos={partners}
                 links={navLinks}
+                arrow={arrowBtn}
             />
             <Facts title="Основные факты" slides={factsSlides} />
             <AirQuality />
@@ -108,7 +112,6 @@ function App() {
                 subtitle="Есть много примеров успешной политики по уменьшению загрязнения воздуха в таких секторах, как транспорт, городское планирование, энергетика и промышленность:"
                 items={sectors}
             />
-
             <Footer logos={partners} links={navLinks} />
         </>
     );

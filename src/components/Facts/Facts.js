@@ -22,10 +22,23 @@ const Facts = ({ title, slides }) => {
       <Swiper
         spaceBetween={40}
         slidesPerView={3}
-        slidesPerGroup={3}
-        // loop={true}
-        // loopFillGroupWithBlank={true}
-        // centeredSlides={true}
+        slidesPerGroup={3}       
+        breakpoints={{
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10
+          },
+          520: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20
+          },
+          769: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }}
 
         navigation={{
           nextEl: '.swiper-button-next',

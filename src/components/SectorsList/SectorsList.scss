@@ -6,13 +6,15 @@
         line-height: 41px;
         color: #ffffff;
         text-align: center;
+        margin: 42px 0 30px;
+
     }
     &-subtitle {
         font-weight: normal;
         font-size: 23px;
         line-height: 27px;
         color: #ffffff;
-        margin: 42px 0 30px;
+        padding: 0 0 30px;
     }
     &-list {
         display: flex;
@@ -25,9 +27,8 @@
             display: flex;
             align-items: center;
             margin-bottom: 30px;
-            // vertical-align: middle;
-           
-            &-name {             
+
+            &-name {
                 width: 100%;
                 text-align: center;
                 font-size: 23px;
@@ -38,7 +39,6 @@
                 &-switched {
                     height: 100%;
                     animation: fadeIn 0.4s ease-in-out;
-
                 }
             }
 
@@ -46,9 +46,11 @@
                 position: absolute;
                 left: 100%;
                 width: 400px;
+                font-weight: normal;
+                font-size: 16px;
+                line-height: 20px;
                 pointer-events: none;
                 appearance: none;
-                // opacity: 0;
                 z-index: 1;
                 background: #dadada;
                 padding: 16px 16px 16px 75px;
@@ -64,11 +66,52 @@
             }
         }
     }
+    &-block {
+        display: none;
+    }
+    .sectors-block {
+        position: absolute;
+        top: 0;
+        background: rgba(255, 255, 255, 0.83);
+        z-index: 10;
+        animation: fadeIn 0.5s ease-in-out;        
+    }
+    .sectors-block-btn {
+        width: 20px;
+        height: 20px;
+        top: 20px;
+        right: 10px;
+        position: absolute;
+        cursor: pointer;
+    }
+    .sectors-block-btn::after {
+        transform: rotate(45deg);
+    }
+    .sectors-block-btn::before {
+        transform: rotate(-45deg);
+    }
+    .sectors-block-btn::after,
+    .sectors-block-btn::before {
+        position: absolute;
+        top: -2px;
+        content: '';
+        width: 2px;
+        height: 25px;
+        background: #000;
+        transition: 0.5s;
+    }
+    .sector-block-title {
+        text-align: center;
+        font-size: 23px;
+        padding-top: 40px;
+    }
+    .sectors-block-text {
+        padding: 30px 20px 20px;
+        font-weight: 400;
+        font-size: 19px;
+        line-height: 22px;
+    }
 }
-
-
-
-
 
 @keyframes fadeIn {
     0% {
@@ -78,3 +121,52 @@
         opacity: 1;
     }
 }
+
+@media (max-width: 1200px) {
+    .sectors-block {
+        display: block;      
+    }
+    .sectors-title {
+        font-size: calc(1.2rem + 1.23vw);
+
+    }
+    .sectors-subtitle {
+        padding: 0 20px 30px;
+    }
+    .sectors-list {
+        flex-direction: row;
+    }
+    .sectors-list-item {
+        width: calc(50% - 50px);
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    .sectors-list-item-name {
+        height: 30px;
+    }
+    .sectors-list-item-tooltip {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .sectors {
+        padding: 20px 0 50px;
+    }
+    .sectors-subtitle {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .sectors-list {
+        flex-direction: row;
+    }
+    .sectors-list-item {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+}
+

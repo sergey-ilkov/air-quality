@@ -23,10 +23,10 @@ const AirQuality = () => {
     }, []);
 
     return (
-        <section className={'air-q container'} id="index">
-            <h2 className="air-q-title">Индекс качества воздуха в режиме реального времени</h2>
-            <div className="air-q-map" ref={mapContainer} />
-            <p className="air-q-text">Для того чтобы узнать уровень загрязнения атмосферного воздуха (качество воздуха) в городе Киев, необходимо выбрать соответствующую станцию мониторинга на карте выше.</p>
+        <section className="maps container" id="index">
+            <h2 className="maps-title">Индекс качества воздуха в режиме реального времени</h2>
+            <div className="maps-map" ref={mapContainer} />
+            <p className="maps-text">Для того чтобы узнать уровень загрязнения атмосферного воздуха (качество воздуха) в городе Киев, необходимо выбрать соответствующую станцию мониторинга на карте выше.</p>
         </section>
     );
 };

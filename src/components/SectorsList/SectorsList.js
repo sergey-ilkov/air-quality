@@ -11,7 +11,8 @@ const SectorsList = ({ title, subtitle, items }) => {
       <h2 className="sectors-title">{title}</h2>
       <p className="sectors-subtitle">{subtitle}</p>
       <div className="sectors-list">        
-          {itemsList}        
+          {itemsList}
+                  
       </div>
     </section>
   );

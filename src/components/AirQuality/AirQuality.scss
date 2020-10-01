@@ -1,4 +1,4 @@
-.air-q {
+.maps {
     padding-top: 99px;
     &-title {
         font-weight: normal;
@@ -16,5 +16,49 @@
         font-size: 23px;
         line-height: 27px;
         color: #ffffff;
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .maps { 
+        &-title { 
+            font-size: calc(1.2rem + 1.23vw);
+        }
+        &-map {
+            font-weight: normal;
+            margin: 20px 0;            
+        }
+        &-text {
+            font-size: calc(0.5rem + 1.23vw);
+            padding: 0 10px;            
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .maps { 
+        padding-top: 0px;        
+        &-map {
+            font-weight: normal;
+            margin: 20px 0;
+            height: 480px;
+        }        
+    }
+}
+
+@media (max-width: 480px) {
+    .maps {         
+        &-title {
+            line-height: 30px;    
+            }
+        &-map {
+            margin: 10px 0;
+        }
+        &-text {
+            line-height: 25px;
+            
+        }
     }
 }
